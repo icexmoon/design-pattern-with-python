@@ -16,3 +16,9 @@ tank2 = ExtraArmour(tank2)
 tank2 = AutomaticWeaponStation(tank2)
 print(tank2.getDescription())
 print(tank2.cost())
+# 狗大户可以买这个：
+# VT4车体,主动防御系统,空调,自动武器站,附加装甲,红外对抗装置
+# 198000
+# 性价比可以买这个：
+# VT1车体,附加装甲,自动武器站
+# 60000
