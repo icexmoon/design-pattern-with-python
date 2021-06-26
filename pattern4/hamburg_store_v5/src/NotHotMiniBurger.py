@@ -9,6 +9,8 @@
 #######################################################
 from .IngredientsFactory import IngredientsFactory
 from .Hamburg import Hamburg
+from .Chicken import Chicken
+from .Pepper import Pepper
 
 
 class NotHotMiniBurger(Hamburg):
@@ -20,6 +22,13 @@ class NotHotMiniBurger(Hamburg):
 
     def cook(self):
         print("cook {}".format(self.name))
+        print("use {}".format(self.chicken.__class__.__name__))
+        print("use {}".format(self.pepper.__class__.__name__))
 
     def ready(self):
         print("Prepare ingredients")
+        chicken: Chicken = self.ingredientFactory.getChicken()
+        self.chicken: Chicken = chicken
+        self.pepper: Pepper = self.ingredientFactory.getPepper()
+        print("prepare {}".format(chicken.__class__.__name__))
+        print("prepare {}".format(self.pepper.__class__.__name__))
