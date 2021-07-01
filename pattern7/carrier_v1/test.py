@@ -9,3 +9,6 @@ independenceCarrier = CarrierAdapter(clevelandCruiser)
 independenceCarrier.takeOffAircraft()
 independenceCarrier.recoveryAircraft()
 clevelandCruiser.gunFire()
+# ClevelandCruiser taking off aircraft
+# ClevelandCruiser recovering aircraft
+# ClevelandCruiser starting gun fire
