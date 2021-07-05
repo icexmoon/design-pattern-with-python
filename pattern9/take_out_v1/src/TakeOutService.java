@@ -30,7 +30,8 @@ public class TakeOutService {
 		}
 		System.out.println("This is a Burger Joint menu:");
 		ArrayList<MenuItem> items = this.burgerJointMenu.getMenuItems();
-		for (MenuItem menuItem : items) {
+		for (int i=0;i<items.size();i++){
+			MenuItem menuItem = items.get(i);
 			System.out.println(menuItem);
 		}
 
