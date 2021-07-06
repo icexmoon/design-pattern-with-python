@@ -20,16 +20,29 @@ public class TakeOutService {
 		this.allMenu.addChild(barbecueHouseMenu);
 		this.allMenu.addChild(burgerJointMenu);
 	}
-
+	
 	public void printMenu() {
 		this.printMenu(this.allMenu);
+		this.printVegetMenuItem(this.allMenu);
 	}
-
+	
 	private void printMenu(Iterable<Node> iterable) {
 		Iterator<Node> iterator = iterable.iterator();
 		while (iterator.hasNext()) {
 			Node menuItem = iterator.next();
 			System.out.println(menuItem);
+		}
+	}
+
+	private void printVegetMenuItem(Menu menu){
+		System.out.println("vegetarian menu is:");
+		for (Node node : menu) {
+			if (node instanceof MenuItem){
+				MenuItem menuItem = (MenuItem)node;
+				if(menuItem.isVegetarian()){
+					System.out.println(menuItem);
+				}
+			}
 		}
 	}
 
